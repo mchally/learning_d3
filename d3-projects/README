@@ -1,0 +1,11 @@
+Overview of directory
+
+-d3-books directory is where are all the example code for each chapter exists and the d3 library as well.
+-D3-Visualization_Process is a text file that describes an ideal way to create a visualization from a csv file, given the amount of work that's already doen for us in terms of categories of visualizations in D3.
+-Takeaways from each chapter show what I learned and highlighted things I felt were important from that specific chapter. 
+-Each csv file in this directory has a corresponding html file and my goal was to create unique data visualizations for each of the csv I found on,
+https://vincentarelbundock.github.io/Rdatasets/datasets.html,
+I was unable to create any good visualizations based on csvs.
+
+
+

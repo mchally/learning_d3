@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: Loading data from a CSV file and creating paragraphs w/ styles</title>
+		<script type="text/javascript" src="../d3/d3.v3.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var dataset; //Global
+			d3.csv("food.csv", function(error, data) {
+				if (error) {
+					console.log(error);
+				} else {
+					console.log(data);
+				}
+
+				dataset = data; //Once loaded, copy to dataset
+				d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(b) {return b.Food;}).style("color",function(d) {
+					if(d.Food == 'Apples' ){
+						return "red";
+					} else if (d.Food == 'Green Beans') {
+						return "green";
+					} else if (d.Food == 'Egg Salad Sandwich'){
+						return "yellow";
+					} else if (d.Food == 'Cookies'){
+						return "chocolate";
+					} else if (d.Food == 'Vegemite'){
+						return "brown";
+					} else if (d.Food == 'Burrito') {
+						return "tan";
+					}
+				});
+			});
+
+		</script>
+	</body>
+</html>

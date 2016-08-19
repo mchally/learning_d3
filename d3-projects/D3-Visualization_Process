@@ -1,0 +1,26 @@
+D3: Creating a Visualization Process
+
+1) Look up the data you want to visualize on the internet. Try to use established databases, credible sources or data aggregators.
+
+2) Download and save the data you are interested in in CSV or JSON format.
+Or, you can just look for an API on the target website and a possibility to download the data in CSV or JSON format, then get the downlaod URL.
+
+3) If option 2 does not work, try see if the data displayed on the page is simply embedded in an HTML table (such as on Wikipedia).
+
+4) Fire up ipython notebook, load pandas.
+	import pandas as pd
+	data = pd.read_csv("absolute_path.csv")
+	print data
+
+5) Load data into a pandas dataframe.
+
+6) Examine data and decide on the visualization type you would like to construct. Try to make your data visualization beautiful. To decide on the format, go to the the D3.js Gallery and open your chosen format. Then go to the source code and check if that particular visualization uses a load function (d3.json or d3.csv) or a locally defined javascript variable as data source. Then check and record the data input format required by your visualization. For more complex visualizations, usually this is a JSON file with a number of fields.
+
+7) Massage the data in pandas into the required format. Then, using Python dictionaries, save the data into a JSON file.
+
+8) Download your chosen D3.js example and fire up a local web server using SmipleHTTP to be able to edit the visualization locally.
+
+9) Now you can modify the D3.js example to work with your data.
+Add any other modifications in a text editor by editing the HTML, CSS and D3.js codes.
+
+10) Life is good 8)
